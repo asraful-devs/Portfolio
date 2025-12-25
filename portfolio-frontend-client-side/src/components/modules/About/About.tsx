@@ -5,6 +5,15 @@ import me from '../../../../public/assetes/me.png';
 import TextWrite from '../../shared/TextWrite';
 
 const About = () => {
+    const handleDownloadResume = () => {
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'Asraful-Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <section className='w-full py-16 md:py-24'>
             <div className='container mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-10'>
@@ -26,7 +35,10 @@ const About = () => {
                     </p>
 
                     <div className='w-full flex justify-center md:justify-start mt-4'>
-                        <button className='inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors'>
+                        <button
+                            onClick={handleDownloadResume}
+                            className='inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors'
+                        >
                             <Download size={20} />
                             Download Resume
                         </button>

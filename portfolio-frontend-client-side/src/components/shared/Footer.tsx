@@ -36,27 +36,27 @@ const Footer = () => {
     const socialLinks = [
         {
             icon: Linkedin,
-            href: 'https://www.linkedin.com/in/asraful4/',
+            href: 'https://www.linkedin.com/in/asraful-devs/',
             name: 'LinkedIn',
         },
         {
             icon: Github,
-            href: 'https://github.com/MdAsraful56',
+            href: 'https://github.com/asraful-devs',
             name: 'GitHub',
         },
         {
             icon: Facebook,
-            href: 'https://www.facebook.com/mdasraful4',
+            href: 'https://www.facebook.com/asraful.devs',
             name: 'Facebook',
         },
         {
             icon: Instagram,
-            href: 'https://www.instagram.com/ashraful_islam_asrf_56/',
+            href: 'https://www.instagram.com/asraful.devs/',
             name: 'Instagram',
         },
         {
             icon: Youtube,
-            href: 'https://www.youtube.com/@MdAsraful-bf6te',
+            href: 'https://www.youtube.com/@asraful_devs',
             name: 'YouTube',
         },
     ];
