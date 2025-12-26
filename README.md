@@ -1,5 +1,3 @@
-# B5-Assignment-7
-
 # Portfolio Website
 
 A modern, full-stack portfolio website built with Next.js, React, and a robust backend infrastructure.
