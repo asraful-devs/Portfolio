@@ -9,8 +9,17 @@ const createProject = async (
         throw new AppError(400, 'Payload is required to create a project.');
     }
 
+    // Trim image URL if provided
+    const cleanedPayload = {
+        ...payload,
+        image:
+            payload.image && typeof payload.image === 'string'
+                ? payload.image.trim()
+                : payload.image,
+    };
+
     const createProject = await prisma.project.create({
-        data: { ...payload },
+        data: cleanedPayload,
     });
     return createProject;
 };
@@ -36,9 +45,18 @@ const updateProject = async (
     id: number,
     payload: Prisma.ProjectUpdateInput
 ): Promise<Project | null> => {
+    // Trim image URL if provided
+    const cleanedPayload = {
+        ...payload,
+        image:
+            payload.image && typeof payload.image === 'string'
+                ? payload.image.trim()
+                : payload.image,
+    };
+
     const updatedProject = await prisma.project.update({
         where: { id },
-        data: { ...payload },
+        data: cleanedPayload,
     });
 
     if (!updatedProject) {

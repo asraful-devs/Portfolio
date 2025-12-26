@@ -1,3 +1,5 @@
+import { getProjects } from '@/actions/project';
+import ProjectsList from '@/components/modules/Dashboard/ProjectsList';
 import { authOptions } from '@/helpers/authOptions';
 import { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 
 const DashboardPage = async () => {
     const session = await getServerSession(authOptions);
+    const projectsResult = await getProjects();
     // console.log(session);
 
     // Get current hour for greeting
@@ -191,6 +194,13 @@ const DashboardPage = async () => {
                         assistance, our support team is always here to help you.
                     </p>
                 </div>
+            </div>
+
+            {/* Projects Section */}
+            <div className='mb-8'>
+                <ProjectsList
+                    projects={projectsResult.success ? projectsResult.data : []}
+                />
             </div>
         </div>
     );

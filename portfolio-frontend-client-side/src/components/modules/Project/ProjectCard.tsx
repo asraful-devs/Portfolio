@@ -19,9 +19,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className='group bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-800 overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-xl transition-all duration-300 h-full flex flex-col'>
             {/* Project Image */}
             <div className='relative h-44 bg-gradient-to-br from-gray-100 to-gray-50 dark:from-slate-800 dark:to-slate-850 overflow-hidden'>
-                {project.image ? (
+                {project.image?.trim() ? (
                     <Image
-                        src={project.image}
+                        src={project.image.trim()}
                         alt={project.name}
                         width={400}
                         height={176}

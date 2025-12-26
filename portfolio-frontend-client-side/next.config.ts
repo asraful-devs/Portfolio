@@ -6,7 +6,16 @@ const nextConfig: NextConfig = {
         ignoreDuringBuilds: true,
     },
     images: {
-        domains: ['images.unsplash.com', 'www.wyv.com', 'www.zyb.com.au'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+            },
+            {
+                protocol: 'http',
+                hostname: '**',
+            },
+        ],
     },
 };
 
