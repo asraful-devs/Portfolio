@@ -1,6 +1,7 @@
 import { authOptions } from '@/helpers/authOptions';
 import { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Dashboard - Portfolio',
@@ -27,7 +28,7 @@ const DashboardPage = async () => {
                     {session?.user?.image ? (
                         <div className='relative'>
                             {/* // eslint-disable-next-line @next/next/no-img-element */}
-                            <img
+                            <Image
                                 src={session.user.image}
                                 alt='Profile'
                                 width={120}

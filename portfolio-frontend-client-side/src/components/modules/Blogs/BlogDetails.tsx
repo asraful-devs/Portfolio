@@ -15,7 +15,7 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
             <h1 className='text-5xl font-bold mb-6'>{blog?.title}</h1>
 
             <div className='flex items-center gap-4 mb-8'>
-                <img
+                <Image
                     src={
                         blog.author.picture ||
                         'https://cdn-icons-png.flaticon.com/512/9385/9385289.png'

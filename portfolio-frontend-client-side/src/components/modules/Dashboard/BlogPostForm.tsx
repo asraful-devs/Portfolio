@@ -1,6 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -291,10 +292,12 @@ const BlogPostForm = () => {
                             )}
                             {formData.thumbnail && !errors.thumbnail && (
                                 <div className='mt-4 rounded-xl overflow-hidden border-2 border-gray-200 dark:border-slate-600'>
-                                    <img
+                                    <Image
                                         src={formData.thumbnail}
                                         alt='Thumbnail preview'
                                         className='w-full h-48 object-cover'
+                                        width={800}
+                                        height={192}
                                         onError={(e) => {
                                             e.currentTarget.src =
                                                 'https://via.placeholder.com/800x400?text=Invalid+Image+URL';

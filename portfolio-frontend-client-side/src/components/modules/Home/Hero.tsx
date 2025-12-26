@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import me from '../../../../public/assetes/me.png';
 import TextWrite from '../../shared/TextWrite';
 import WhatsAppButton from '../../shared/WhatsupButton';
@@ -32,10 +33,12 @@ const Hero = () => {
                 {/* Image Section */}
                 <div className='flex-1 flex justify-center'>
                     <div className='relative w-96 h-96 sm:w-96 sm:h-96 md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl'>
-                        <img
+                        <Image
                             src={me.src}
                             alt='Asraful'
                             className='w-full h-full object-cover object-top'
+                            width={450}
+                            height={450}
                         />
                     </div>
                 </div>

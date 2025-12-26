@@ -19,6 +19,7 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import { getServerSession } from 'next-auth';
+import Image from 'next/image';
 import { authOptions } from '../../helpers/authOptions';
 import { ModeToggle } from '../ModeToggle';
 
@@ -92,7 +93,7 @@ export async function Navbar() {
                     {session ? (
                         <div className='ml-2'>
                             {session.user?.image ? (
-                                <img
+                                <Image
                                     src={session.user?.image as string}
                                     alt={session.user?.name ?? 'User avatar'}
                                     width={36}
@@ -152,7 +153,7 @@ export async function Navbar() {
                                 {session ? (
                                     <div className='mt-4 flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-100/50 dark:bg-slate-800/50'>
                                         {session.user?.image && (
-                                            <img
+                                            <Image
                                                 src={
                                                     session.user
                                                         ?.image as string

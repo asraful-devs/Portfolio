@@ -1,4 +1,5 @@
 import { Calendar, Code2, ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     project: {
@@ -19,7 +20,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {/* Project Image */}
             <div className='relative h-44 bg-gradient-to-br from-gray-100 to-gray-50 dark:from-slate-800 dark:to-slate-850 overflow-hidden'>
                 {project.image ? (
-                    <img
+                    <Image
                         src={project.image}
                         alt={project.name}
                         width={400}
