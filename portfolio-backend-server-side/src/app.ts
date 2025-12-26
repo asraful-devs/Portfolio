@@ -17,7 +17,7 @@ app.use(cookieParser()); // Parse Cookie header and populate req.cookies
 
 app.use(
     cors({
-        origin: 'https://portfolio-frontend-client-side.vercel.app',
+        origin: 'https://portfolio-client-site.vercel.app',
         credentials: true,
     })
 );
