@@ -2,6 +2,11 @@
 
 A modern, full-stack portfolio website built with Next.js, React, and a robust backend infrastructure.
 
+## Live Link
+
+Client Side: [https://portfolio-client-site.vercel.app/](https://portfolio-client-site.vercel.app/)
+Backend Server Side: [https://portfolio-backend-server-side.vercel.app/](https://portfolio-backend-server-side.vercel.app/)
+
 ## 🚀 Tech Stack
 
 ### Frontend
@@ -27,48 +32,6 @@ A modern, full-stack portfolio website built with Next.js, React, and a robust b
 -   ⚡ Server-side rendering with Next.js
 -   🌐 RESTful API with Express
 -   💾 PostgreSQL database
-
-## 📋 Prerequisites
-
-Before you begin, ensure you have installed:
-
--   Node.js (v18 or higher)
--   PostgreSQL (v14 or higher)
--   npm or yarn package manager
-
-## 🛠 Installation
-
-1. Clone the repository
-   bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-
-2. Install dependencies
-   bash
-   npm install
-
-# or
-
-yarn install
-
-3. Set up environment variables
-   bash
-   cp .env.example .env
-
-Edit `.env` file with your configuration:
-env
-DATABASE_URL="postgresql://user:password@localhost:5432/portfolio"
-NEXT_PUBLIC_API_URL="http://localhost:3000"
-JWT_SECRET="your-secret-key"
-
-4. Run database migrations
-   bash
-   npx prisma migrate dev
-   npx prisma generate
-
-5. Seed the database (optional)
-   bash
-   npm run seed
 
 ### Production Build
 
